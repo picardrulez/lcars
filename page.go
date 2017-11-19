@@ -6,7 +6,7 @@ type Page struct {
 	Content string
 }
 
-func pageBuilder() string {
+func pageBuilder(mymenu Menu) string {
 	pageReturn := `
 	<html lang="en">
 	<head>
@@ -50,6 +50,9 @@ func pageBuilder() string {
 	<!-- SIDE MENU ================== -->
 
 	<div id="left-menu" class="lcars-column start-space lcars-u-1">
+	`
+	pageReturn = pageReturn + makeMenu(mymenu)
+	pageReturn = pageReturn + `
 
 	  <!-- FILLER -->
 	  <div class="lcars-bar lcars-u-1"></div>
