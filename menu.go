@@ -18,7 +18,7 @@ func makeMenu(menu Menu) string {
 		content = content + `
 		<a href="`
 		content = content + newitem[0]
-		content = content + `" class=lcars-element button lcars-blue-bell-bg">`
+		content = content + `" class="lcars-element button lcars-blue-bell-bg">`
 		content = content + newitem[1]
 		content = content + `</a>`
 	}
