@@ -14,7 +14,7 @@ func makeMenu(menu Menu) string {
 		<div class="lcars-column">
 	`
 	for _, k := range menu.Items {
-		newitem := strings.Split(k, ":")
+		newitem := strings.Split(k, "|")
 		content = content + `
 		<a href="`
 		content = content + newitem[0]
