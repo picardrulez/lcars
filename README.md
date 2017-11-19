@@ -1,8 +1,9 @@
 # lcars
 A Go library that builds html pages styled similarly to the LCARS user interface from the 24th Century.  The LCARS CSS template is based off of https://github.com/joernweissenborn/lcars
 
-#Example usage:
+## Example usage:
 
+```
 package main
 import (
   "github.com/picardrulez/lcars"
@@ -21,3 +22,4 @@ func exampleHandler(w http.ResponseWriter, r *http.Request) {
    `
    t, creatrePage := lcars.MakePage(content)
    t.Execute(w, createPage)
+```
