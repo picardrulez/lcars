@@ -69,7 +69,7 @@ func pageBuilder(mymenu Menu, mysettings Settings) string {
 	  <!-- BAR -->
 	  <div class="lcars-bar horizontal lcars-` + lcarscolor + `-bg both-divider bottom"></div>
 	  <!-- ROUNDED EDGE -->
-	  <div class="lcars-bar horizontal right-end left-divider bottom"></div>
+	  <div class="lcars-bar horizontal lcars-` + lcarscolor + `-bg right-end left-divider bottom"></div>
 	</div>
 
 	<!-- MAIN CONTAINER -->
