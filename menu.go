@@ -39,7 +39,7 @@ func makeMenu(menu Menu, settings Settings) string {
 }
 
 func pickColor(iteration int) string {
-	colors := []string{"pale-canary", "danub", "hopbush", "blue", "neon-carrot", "mariner", "lilac"}
+	colors := []string{"pale-canary", "danub", "hopbush", "blue", "tan", "mariner", "lilac"}
 	numpicked := false
 	for numpicked == false {
 		if iteration <= len(colors)-1 {
