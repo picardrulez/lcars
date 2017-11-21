@@ -42,18 +42,17 @@ func pickColor(iteration int) string {
 	colors := []string{"pale-canary", "danub", "hopbush"}
 	numpicked := false
 	for numpicked == false {
-		if iteration <= len(colors) {
+		if iteration <= len(colors)-1 {
 			numpicked = true
 		} else {
-			for iteration > len(colors) {
-				iteration = iteration - len(colors)
-				if iteration <= len(colors) {
+			for iteration > len(colors)-1 {
+				iteration = iteration - (len(colors) - 1)
+				if iteration <= len(colors)-1 {
 					numpicked = true
 				}
 			}
 		}
 	}
-	iteration = iteration - 1
 	log.Println("returning " + strconv.Itoa(iteration))
 	return colors[iteration]
 }
