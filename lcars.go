@@ -5,9 +5,10 @@ import (
 )
 
 type Settings struct {
-	Title string
-	Color string
-	Menu  bool
+	Title       string
+	TopColor    string
+	BottomColor string
+	Menu        bool
 }
 
 func MakePage(content string, mymenu Menu, mysettings Settings) (*template.Template, Page) {

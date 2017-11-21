@@ -7,7 +7,8 @@ type Page struct {
 }
 
 func pageBuilder(mymenu Menu, mysettings Settings) string {
-	lcarscolor := mysettings.Color
+	lcarstopcolor := mysettings.TopColor
+	lcarsbottomcolor := mysettings.BottomColor
 	pageReturn := `
 	<html lang="en">
 	<head>
@@ -37,15 +38,15 @@ func pageBuilder(mymenu Menu, mysettings Settings) string {
 	<!-- HEADER================================== -->
 	<div id="header" class="lcars-row header">
 	  <!-- ELBOW -->
-	  <div class="lcars-elbow left-bottom lcars-` + lcarscolor + `-bg"></div>
+	  <div class="lcars-elbow left-bottom lcars-` + lcarstopcolor + `-bg"></div>
 
 	  <!-- BAR WITH TITLE -->
-	  <div class="lcars-bar horizontal lcars-` + lcarscolor + `-bg">
+	  <div class="lcars-bar horizontal lcars-` + lcarstopcolor + `-bg">
 	    <div class="lcars-title right">eps-conduit</div>
 	  </div>
 
 	  <!-- ROUNDED EDGE DECORATED -->
-	  <div class="lcars-bar horizontal right-end decorated lcars-` + lcarscolor + `-bg"></div>
+	  <div class="lcars-bar horizontal right-end decorated lcars-` + lcarstopcolor + `-bg"></div>
 	</div>
 
 	<!-- SIDE MENU ================== -->
@@ -58,18 +59,18 @@ func pageBuilder(mymenu Menu, mysettings Settings) string {
 	pageReturn = pageReturn + `
 
 	  <!-- FILLER -->
-	  <div class="lcars-bar lcars-` + lcarscolor + `-bg lcars-u-1"></div>
+	  <div class="lcars-bar lcars-` + lcarsbottomcolor + `-bg lcars-u-1"></div>
 	</div>
 
 	<!-- FOOTER ============================ -->
 
 	<div id="footer" class="lcars-row ">
 	  <!-- ELBOW -->
-	  <div class="lcars-elbow left-top lcars-` + lcarscolor + `-bg"></div>
+	  <div class="lcars-elbow left-top lcars-` + lcarsbottomcolor + `-bg"></div>
 	  <!-- BAR -->
-	  <div class="lcars-bar horizontal lcars-` + lcarscolor + `-bg both-divider bottom"></div>
+	  <div class="lcars-bar horizontal lcars-` + lcarsbottomcolor + `-bg both-divider bottom"></div>
 	  <!-- ROUNDED EDGE -->
-	  <div class="lcars-bar horizontal lcars-` + lcarscolor + `-bg right-end left-divider bottom"></div>
+	  <div class="lcars-bar horizontal lcars-` + lcarsbottomcolor + `-bg right-end left-divider bottom"></div>
 	</div>
 
 	<!-- MAIN CONTAINER -->
