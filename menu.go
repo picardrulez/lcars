@@ -1,6 +1,8 @@
 package lcars
 
 import (
+	"log"
+	"strconv"
 	"strings"
 )
 
@@ -51,5 +53,6 @@ func pickColor(iteration int) string {
 			}
 		}
 	}
+	log.Println("returning " + strconv.Itoa(iteration))
 	return colors[iteration]
 }
