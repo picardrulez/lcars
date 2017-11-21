@@ -40,7 +40,7 @@ func pageBuilder(mymenu Menu, mysettings Settings) string {
 	  <div class="lcars-elbow left-bottom lcars-` + lcarscolor + `-bg"></div>
 
 	  <!-- BAR WITH TITLE -->
-	  <div class="lcars-bar horizontal">
+	  <div class="lcars-bar horizontal lcars-` + lcarscolor + `-bg">
 	    <div class="lcars-title right">eps-conduit</div>
 	  </div>
 
