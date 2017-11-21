@@ -6,7 +6,8 @@ type Page struct {
 	Content string
 }
 
-func pageBuilder(mymenu Menu) string {
+func pageBuilder(mymenu Menu, mysettings Settings) string {
+	lcarscolor := mysettings.Color
 	pageReturn := `
 	<html lang="en">
 	<head>
@@ -36,7 +37,7 @@ func pageBuilder(mymenu Menu) string {
 	<!-- HEADER================================== -->
 	<div id="header" class="lcars-row header">
 	  <!-- ELBOW -->
-	  <div class="lcars-elbow left-bottom lcars-tan-bg"></div>
+	  <div class="lcars-elbow left-bottom lcars-` + lcarscolor + `-bg"></div>
 
 	  <!-- BAR WITH TITLE -->
 	  <div class="lcars-bar horizontal">
@@ -64,7 +65,7 @@ func pageBuilder(mymenu Menu) string {
 
 	<div id="footer" class="lcars-row ">
 	  <!-- ELBOW -->
-	  <div class="lcars-elbow left-top lcars-tan-bg"></div>
+	  <div class="lcars-elbow left-top lcars-` + lcarscolor + `-bg"></div>
 	  <!-- BAR -->
 	  <div class="lcars-bar horizontal both-divider bottom"></div>
 	  <!-- ROUNDED EDGE -->
