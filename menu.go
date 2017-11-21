@@ -8,7 +8,8 @@ type Menu struct {
 	Items []string
 }
 
-func makeMenu(menu Menu) string {
+func makeMenu(menu Menu, settings Settings) string {
+	menucolor := settings.MenuColor
 	content := `
 	<div class="lcars-row">
 		<div class="lcars-column">
@@ -18,7 +19,7 @@ func makeMenu(menu Menu) string {
 		content = content + `
 		<a href="`
 		content = content + newitem[0]
-		content = content + `" style="text-decoration:none" class="lcars-element button lcars-blue-bell-bg">`
+		content = content + `" style="text-decoration:none" class="lcars-element button lcars-` + menucolor + `-bg">`
 		content = content + newitem[1]
 		content = content + `</a>`
 	}

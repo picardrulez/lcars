@@ -8,6 +8,7 @@ type Settings struct {
 	Title       string
 	TopColor    string
 	BottomColor string
+	MenuColor   string
 	Menu        bool
 }
 
