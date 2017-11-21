@@ -51,7 +51,9 @@ func pageBuilder(mymenu Menu) string {
 
 	<div id="left-menu" class="lcars-column start-space lcars-u-1">
 	`
-	pageReturn = pageReturn + makeMenu(mymenu)
+	if mymenu.Items != nil {
+		pageReturn = pageReturn + makeMenu(mymenu)
+	}
 	pageReturn = pageReturn + `
 
 	  <!-- FILLER -->
