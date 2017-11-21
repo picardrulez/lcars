@@ -17,14 +17,17 @@ func makeMenu(menu Menu, settings Settings) string {
 		<div class="lcars-column">
 	`
 	for _, k := range menu.Items {
+		var thiscolor string
 		if menucolor == "random" {
-			menucolor = pickColor()
+			thiscolor = pickColor()
+		} else {
+			thiscolor = menucolor
 		}
 		newitem := strings.Split(k, "|")
 		content = content + `
 		<a href="`
 		content = content + newitem[0]
-		content = content + `" style="text-decoration:none" class="lcars-element button lcars-` + menucolor + `-bg">`
+		content = content + `" style="text-decoration:none" class="lcars-element button lcars-` + thiscolor + `-bg">`
 		content = content + newitem[1]
 		content = content + `</a>`
 	}
