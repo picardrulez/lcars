@@ -1,9 +1,7 @@
 package lcars
 
 import (
-	"math/rand"
 	"strings"
-	"time"
 )
 
 type Menu struct {
@@ -16,10 +14,10 @@ func makeMenu(menu Menu, settings Settings) string {
 	<div class="lcars-row">
 		<div class="lcars-column">
 	`
-	for _, k := range menu.Items {
+	for i, k := range menu.Items {
 		var thiscolor string
 		if menucolor == "random" {
-			thiscolor = pickColor()
+			thiscolor = pickColor(i)
 		} else {
 			thiscolor = menucolor
 		}
@@ -38,9 +36,20 @@ func makeMenu(menu Menu, settings Settings) string {
 	return content
 }
 
-func pickColor() string {
+func pickColor(iteration int) string {
 	colors := []string{"pale-canary", "danub", "hopbush"}
-	rand.Seed(time.Now().Unix())
-	randnum := rand.Intn(3-1) + 1
-	return colors[randnum]
+	numpicked := false
+	for numpicked == false {
+		if iteration <= len(colors) {
+			numpicked = true
+		} else {
+			for iteration <= len(colors) {
+				iteration = iteration - 3
+				if iteration <= len(colors) {
+					numpicked = true
+				}
+			}
+		}
+	}
+	return colors[iteration]
 }
