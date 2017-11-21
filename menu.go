@@ -46,7 +46,7 @@ func pickColor(iteration int) string {
 			numpicked = true
 		} else {
 			for iteration > len(colors)-1 {
-				iteration = iteration - (len(colors) - 1)
+				iteration = iteration - len(colors)
 				if iteration <= len(colors)-1 {
 					numpicked = true
 				}
