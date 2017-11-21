@@ -45,7 +45,7 @@ func pageBuilder(mymenu Menu, mysettings Settings) string {
 	  </div>
 
 	  <!-- ROUNDED EDGE DECORATED -->
-	  <div class="lcars-bar horizontal right-end decorated"></div>
+	  <div class="lcars-bar horizontal right-end decorated lcars-` + lcarscolor + `-bg"></div>
 	</div>
 
 	<!-- SIDE MENU ================== -->
@@ -58,7 +58,7 @@ func pageBuilder(mymenu Menu, mysettings Settings) string {
 	pageReturn = pageReturn + `
 
 	  <!-- FILLER -->
-	  <div class="lcars-bar lcars-u-1"></div>
+	  <div class="lcars-bar lcars-` + lcarscolor + `-bg lcars-u-1"></div>
 	</div>
 
 	<!-- FOOTER ============================ -->
@@ -67,7 +67,7 @@ func pageBuilder(mymenu Menu, mysettings Settings) string {
 	  <!-- ELBOW -->
 	  <div class="lcars-elbow left-top lcars-` + lcarscolor + `-bg"></div>
 	  <!-- BAR -->
-	  <div class="lcars-bar horizontal both-divider bottom"></div>
+	  <div class="lcars-bar horizontal lcars-` + lcarscolor + `-bg both-divider bottom"></div>
 	  <!-- ROUNDED EDGE -->
 	  <div class="lcars-bar horizontal right-end left-divider bottom"></div>
 	</div>
