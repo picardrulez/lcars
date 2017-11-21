@@ -9,11 +9,12 @@ type Page struct {
 func pageBuilder(mymenu Menu, mysettings Settings) string {
 	lcarstopcolor := mysettings.TopColor
 	lcarsbottomcolor := mysettings.BottomColor
+	title := mysettings.Title
 	pageReturn := `
 	<html lang="en">
 	<head>
 	  <meta charset="UTF_8">
-	  <title>EPS-CONDUIT</title>
+	  <title>` + title + `</title>
 	  <style  type="text/css">
 	  `
 	pageReturn = pageReturn + lcarscss +
@@ -42,7 +43,7 @@ func pageBuilder(mymenu Menu, mysettings Settings) string {
 
 	  <!-- BAR WITH TITLE -->
 	  <div class="lcars-bar horizontal lcars-` + lcarstopcolor + `-bg">
-	    <div class="lcars-title right">eps-conduit</div>
+	    <div class="lcars-title right">` + title + `</div>
 	  </div>
 
 	  <!-- ROUNDED EDGE DECORATED -->
